@@ -105,9 +105,6 @@ NSRecursiveLock *resultLock = [NSRecursiveLock alloc];
       case kGIDSignInErrorCodeKeychain:
         currentResult_->result_code = kStatusCodeInternalError;
         break;
-      case kGIDSignInErrorCodeNoSignInHandlersInstalled:
-        currentResult_->result_code = kStatusCodeDeveloperError;
-        break;
       case kGIDSignInErrorCodeHasNoAuthInKeychain:
         currentResult_->result_code = kStatusCodeError;
         break;
