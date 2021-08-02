@@ -236,7 +236,7 @@ void *GoogleSignIn_SignIn() {
 void *GoogleSignIn_SignInSilently() {
   SignInResult *result = startSignIn();
   if (!result) {
-    [[GIDSignIn sharedInstance] signInSilently];
+    [[GIDSignIn sharedInstance] restorePreviousSignIn];
     result = currentResult_.get();
   }
   return result;
