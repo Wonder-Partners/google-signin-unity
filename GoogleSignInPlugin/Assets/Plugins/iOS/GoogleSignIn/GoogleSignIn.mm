@@ -188,7 +188,7 @@ bool GoogleSignIn_Configure(void *unused, bool useGameSignIn,
     [GIDSignIn sharedInstance].loginHint =
         [NSString stringWithUTF8String:accountName];
   }
-
+  [GIDSignIn sharedInstance].presentingViewController = UnityGetGLViewController();
   return !useGameSignIn;
 }
 
